@@ -7,7 +7,7 @@ app.use(express.urlencoded({ extended: false }))
 const methodOverride = require("method-override")
 app.use(methodOverride("_method"))
 app.use(express.static("public"))
-app.listen(port, () => {
+app.listen(process.env.PORT, () => {
     console.log('hello on port: ' + port);
 })
 
